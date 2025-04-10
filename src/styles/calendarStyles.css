@@ -1,0 +1,105 @@
+/* Стили для индикатора задач */
+.task-indicator {
+    width: 4px;
+    height: 4px;
+    background-color: #ff9f43;
+    border-radius: 50%;
+    margin: 2px auto 0;
+}
+
+/* Стили для кнопки "Ещё" */
+.day-item.more-btn {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.day-item.more-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Стили для полного календаря */
+.full-calendar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.full-calendar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.close-calendar-btn {
+    font-size: 20px !important;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day-header {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    padding: 5px 0;
+}
+
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-day.empty {
+    cursor: default;
+}
+
+.calendar-day.today {
+    background-color: #f0e6d8;
+}
+
+.calendar-day.selected {
+    background-color: #e8d9c5;
+}

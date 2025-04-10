@@ -1,0 +1,156 @@
+/*ИСКЛЮЧИТЕЛЬНЫЕ СТИЛИ ДЛЯ АНИМАЦИИ ЗАДАЧ ПРЫГАЮЩИХ
+ВВЕРХ-ВНИЗ
+ */
+
+/* Анимация чекбокса */
+.custom-checkbox {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Анимация галочки для активных задач */
+.task-checkbox .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Класс для анимации галочки */
+.animate-checkmark::after {
+    animation: checkmarkDraw 0.3s ease forwards;
+}
+
+/* Статичная галочка для выполненных задач */
+.custom-checkbox.completed::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+
+@keyframes checkmarkDraw {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        transform: rotate(45deg) scale(0);
+    }
+    30% {
+        height: 0;
+        width: 6px;
+        opacity: 1;
+        transform: rotate(45deg) scale(0.8);
+    }
+    60% {
+        height: 10px;
+        width: 6px;
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+    100% {
+        height: 10px;
+        width: 6px;
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* Анимации для активных задач */
+.task-active-enter {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.task-active-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.task-active-exit {
+    opacity: 1;
+}
+
+.task-active-exit-active {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* Анимации для задач, возвращающихся из Completed */
+.task-from-completed-enter {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.task-from-completed-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.task-from-completed-exit {
+    opacity: 1;
+}
+
+.task-from-completed-exit-active {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* Анимации для выполненных задач */
+.task-completed-enter {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.task-completed-enter-active {
+    opacity: 0.7;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.task-completed-exit {
+    opacity: 0.7;
+}
+
+.task-completed-exit-active {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* Общие стили для задач */
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.task-item.completed {
+    opacity: 0.7;
+}
