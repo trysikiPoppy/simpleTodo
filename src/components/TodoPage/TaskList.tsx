@@ -35,7 +35,7 @@ function TaskList({ tasks, toggleTaskStatus, deleteTask }: TaskListProps) {
 
         // Запоминаем текущие выполненные задачи для следующего сравнения
         setPreviousCompletedIds(completedIds);
-    }, [tasks]);
+    }, [tasks, previousCompletedIds, taskSources]);
 
     const getOrCreateRef = (id: number) => {
         if (!nodeRefs.current.has(id)) {
