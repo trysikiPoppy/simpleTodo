@@ -4,11 +4,11 @@ A modern todo application built with React and TypeScript, based on a popular Fi
 
 ## Live Demo
 
-**[View Application](https://zippy-yeot-23e82f.netlify.app/)**
+**→ [View Application](https://zippy-yeot-23e82f.netlify.app/)**
 
 ## Design Reference
 
-**[Original Figma Design](https://www.figma.com/community/file/1006955130775844314/to-do-list-design)**
+**→ [Original Figma Design](https://www.figma.com/community/file/1006955130775844314/to-do-list-design)**
 
 ## Key Features
 
