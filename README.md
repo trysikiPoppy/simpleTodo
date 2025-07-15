@@ -16,7 +16,7 @@ A modern todo application built with React and TypeScript, based on a popular Fi
 
 ![Figma Design](<./public/image_2025-07-16_00-11-35%20(2).png>)
 
-**[View Original Figma File](https://www.figma.com/community/file/1006955130775844314/to-do-list-design)**
+**→ [View Original Figma File](https://www.figma.com/community/file/1006955130775844314/to-do-list-design)**
 
 ## Key Features
 
