@@ -1,277 +1,268 @@
-/* Общие стили для второй страницы*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 .todo-page {
-    width: 100%;
-    height: 100%;
-    background: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-/* Стили для календаря */
 .calendar-section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .calendar-section h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .days-row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    overflow-x: auto;
-    padding-bottom: 5px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 5px;
 }
 
 .day-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 60px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .day-item.selected {
-    background-color: #e8d9c5;
+  background-color: #e8d9c5;
 }
 
 .day-name {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 5px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 5px;
 }
 
 .day-number {
-    font-size: 16px;
-    font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .calendar-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
-/* Стили для списка задач */
 .tasks-section {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 0 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0 20px;
 }
 
 .task-category {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .category-title {
-    font-size: 12px;
-    color: #b3a397;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-weight: 500;
+  font-size: 12px;
+  color: #b3a397;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .task-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .task-item {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .task-checkbox {
-    margin-right: 10px;
-    position: relative;
+  margin-right: 10px;
+  position: relative;
 }
 
 .task-checkbox input {
-    opacity: 0;
-    position: absolute;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .custom-checkbox {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .task-text {
-    flex-grow: 1;
-    font-size: 14px;
+  flex-grow: 1;
+  font-size: 14px;
 }
 
 .task-item.completed .task-text {
-    color: #888;
+  color: #888;
 }
 
 .delete-task-btn {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: #888;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #888;
 }
 
-/* Стили для формы добавления задач */
 .add-task-form {
-    margin-top: 20px;
-    padding: 20px 20px 0;
+  margin-top: 20px;
+  padding: 20px 20px 0;
 }
 
 .input-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .task-input {
-    flex-grow: 1;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 14px;
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 .calendar-btn {
-    padding: 0 15px;
-    background: #f0f0f0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 0 15px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .add-btn {
-    padding: 0 20px;
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
+  padding: 0 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .category-selector {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-/* Стили для выпадающего списка */
 .category-selector select {
-    width: 100%;
-    padding: 10px 30px 10px 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #555;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #555;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
 }
 
 .category-selector select:focus {
-    outline: none;
-    border-color: #b3a397;
-    box-shadow: 0 0 0 2px rgba(179, 163, 151, 0.2);
+  outline: none;
+  border-color: #b3a397;
+  box-shadow: 0 0 0 2px rgba(179, 163, 151, 0.2);
 }
 
-/* Стили для раздела выполненных задач */
 .completed-section {
-    margin-top: 20px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
 }
 
 .completed-title {
-    font-size: 16px;
-    color: #888;
-    margin-bottom: 10px;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 10px;
 }
 
-/* Стили для всплывающего календаря */
 .calendar-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 100;
-    width: 80%;
-    max-width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  width: 80%;
+  max-width: 350px;
 }
 
 .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .close-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .calendar-month {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
 }
 
 .calendar-day {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .calendar-day.selected {
-    background-color: #e8d9c5;
+  background-color: #e8d9c5;
 }
 
-/* Стили для выделения текущего дня */
 .day-item.today {
-    background-color: #f0e6d8;
+  background-color: #f0e6d8;
 }

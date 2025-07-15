@@ -2,7 +2,7 @@ import { Task } from './types';
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
-// Преобразование данных с сервера в наш формат Task
+
 const transformTodoToTask = (todo: any): Task => ({
     id: todo.id,
     text: todo.title,
@@ -11,7 +11,7 @@ const transformTodoToTask = (todo: any): Task => ({
     category: todo.userId === 1 ? 'PERSONAL' : todo.userId === 2 ? 'WORK' : todo.userId === 3 ? 'DESIGN' : 'HOUSE'
 });
 
-// Получение всех задач
+
 export const fetchTasks = async (): Promise<Task[]> => {
     try {
         const response = await fetch(`${API_URL}/todos?_limit=9`);
@@ -23,7 +23,7 @@ export const fetchTasks = async (): Promise<Task[]> => {
     }
 };
 
-// Добавление новой задачи
+
 export const addTask = async (text: string, category: string): Promise<Task | null> => {
     try {
         const userId = category === 'PERSONAL' ? 1 : category === 'WORK' ? 2 : category === 'DESIGN' ? 3 : 4;
@@ -48,7 +48,7 @@ export const addTask = async (text: string, category: string): Promise<Task | nu
     }
 };
 
-// Обновление статуса задачи
+
 export const updateTaskStatus = async (taskId: number, completed: boolean): Promise<boolean> => {
     try {
         const response = await fetch(`${API_URL}/todos/${taskId}`, {
@@ -68,7 +68,7 @@ export const updateTaskStatus = async (taskId: number, completed: boolean): Prom
     }
 };
 
-// Удаление задачи
+
 export const deleteTask = async (taskId: number): Promise<boolean> => {
     try {
         const response = await fetch(`${API_URL}/todos/${taskId}`, {

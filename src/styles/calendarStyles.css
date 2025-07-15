@@ -1,4 +1,3 @@
-/* Стили для индикатора задач */
 .task-indicator {
     width: 4px;
     height: 4px;
@@ -7,7 +6,6 @@
     margin: 2px auto 0;
 }
 
-/* Стили для кнопки "Ещё" */
 .day-item.more-btn {
     background-color: #f0f0f0;
     cursor: pointer;
@@ -17,7 +15,6 @@
     background-color: #e0e0e0;
 }
 
-/* Стили для полного календаря */
 .full-calendar-overlay {
     position: fixed;
     top: 0;

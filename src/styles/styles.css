@@ -1,4 +1,3 @@
-/*стили первой страницы*/
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 :root {
@@ -16,7 +15,6 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Центрирование приложения с шириной мобильного экрана */
 #root {
     display: flex;
     justify-content: center;
@@ -32,7 +30,6 @@ body {
     position: relative;
 }
 
-/* Стили для WelcomePage */
 .welcome-page {
     width: 100%;
     height: 100%;
@@ -113,9 +110,9 @@ body {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    margin-left: -20px; /* Отрицательный отступ для компенсации padding родительского элемента */
+    margin-left: -20px; 
     padding-left: 0;
-    width: calc(100% + 40px); /* Увеличиваем ширину, чтобы компенсировать отступы с обеих сторон */
+    width: calc(100% + 40px); 
 }
 
 
@@ -133,35 +130,29 @@ body {
 
 .habit-tag {
     display: inline-block;
-    /*background-color: rgba(240, 240, 240, 0.4); !* Светло-серый фон с прозрачностью *!*/
-    background-color: transparent; /* Светло-серый фон с прозрачностью */
+    background-color: transparent; 
     padding: 6px 12px;
     border-radius: 12px;
     font-size: 14px;
     margin-right: 15px;
-    color: #777; /* Делаем текст менее контрастным */
-    user-select: none; /* Запрещаем выделение текста */
-    /*cursor: pointer; !* Добавляем курсор-указатель *!*/
-    /*transition: background-color 0.2s; !* Плавное изменение цвета при наведении *!*/
+    color: #777; 
+    user-select: none; 
 }
 
-/*.habit-tag:hover {*/
-/*    background-color: rgba(220, 220, 220, 0.9); !* Немного темнее при наведении *!*/
-/*}*/
 
 .continue-btn {
-    width: 80%; /* Уменьшаем ширину с 100% до 80% */
-    max-width: 300px; /* Максимальная ширина */
+    width: 80%; 
+    max-width: 300px; 
     padding: 16px;
     background-color: var(--button-bg);
     color: var(--button-text);
     border: none;
-    border-radius: 12px; /* Увеличиваем закругление с 4px до 12px */
+    border-radius: 12px; 
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    margin: 0 auto; /* Центрируем кнопку */
-    display: block; /* Для корректной работы margin: 0 auto */
+    margin: 0 auto; 
+    display: block; 
 }
 
 @keyframes marquee {
@@ -169,7 +160,7 @@ body {
     100% { transform: translateX(-100%); }
 }
 
-/* Медиа-запрос для адаптивности */
+
 @media (min-width: 768px) {
     .app-container {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
