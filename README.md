@@ -4,7 +4,7 @@ A modern todo application built with React and TypeScript, based on a popular Fi
 
 ## Live Demo
 
-**[View Application](https://zippy-yeot-23e82f.netlify.app/)**
+**→ [View Application](https://zippy-yeot-23e82f.netlify.app/)**
 
 ## Application Preview
 
